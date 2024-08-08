@@ -1,0 +1,14 @@
+[user]
+	email = My-ro@users.noreply.github.com
+	name = My-ro
+[alias]
+	bblame = blame -w -C -C -C -L
+	staash = stash --all
+	diffw = diff --word-diff
+	pushf = push --force-with-lease
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
