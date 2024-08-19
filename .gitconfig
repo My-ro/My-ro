@@ -3,12 +3,23 @@
 	name = My-ro
 [alias]
 	bblame = blame -w -C -C -C -L
-	staash = stash --all
 	diffw = diff --word-diff
+	fetchall = config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+	hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %a>
+	lg = log --graph --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Crese>
 	pushf = push --force-with-lease
-[rerere]
-	enabled = true
-[column]
-	ui = auto
+	staash = stash --all
 [branch]
 	sort = -committerdate
+[column]
+	ui = auto
+[commit]
+        gpgsign = true
+[credential]
+        helper = store
+[merge]
+        tool = meld
+[mergetool "meld"]
+        hideResolved = true
+[rerere]
+	enabled = true
